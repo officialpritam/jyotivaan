@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JyotiVaan | Guidance for a Better You</title>
+  <meta name="description" content="Personalized Vedic astrology, numerology and life guidance from experienced astrologers.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Reusable SVG symbols -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mandala" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-width="2.2">
+        <circle cx="50" cy="50" r="12"/>
+        <circle cx="50" cy="50" r="20"/>
+        <circle cx="50" cy="50" r="5" fill="currentColor"/>
+      </g>
+      <g fill="currentColor">
+        <path id="ray" d="M50 2 L54 22 L50 28 L46 22 Z"/>
+        <use href="#ray" transform="rotate(30 50 50)"/>
+        <use href="#ray" transform="rotate(60 50 50)"/>
+        <use href="#ray" transform="rotate(90 50 50)"/>
+        <use href="#ray" transform="rotate(120 50 50)"/>
+        <use href="#ray" transform="rotate(150 50 50)"/>
+        <use href="#ray" transform="rotate(180 50 50)"/>
+        <use href="#ray" transform="rotate(210 50 50)"/>
+        <use href="#ray" transform="rotate(240 50 50)"/>
+        <use href="#ray" transform="rotate(270 50 50)"/>
+        <use href="#ray" transform="rotate(300 50 50)"/>
+        <use href="#ray" transform="rotate(330 50 50)"/>
+      </g>
+      <g fill="currentColor" opacity=".8">
+        <circle id="dot" cx="50" cy="35" r="2"/>
+        <use href="#dot" transform="rotate(45 50 50)"/>
+        <use href="#dot" transform="rotate(90 50 50)"/>
+        <use href="#dot" transform="rotate(135 50 50)"/>
+        <use href="#dot" transform="rotate(180 50 50)"/>
+        <use href="#dot" transform="rotate(225 50 50)"/>
+        <use href="#dot" transform="rotate(270 50 50)"/>
+        <use href="#dot" transform="rotate(315 50 50)"/>
+      </g>
+    </symbol>
+    <symbol id="zodiac-wheel" viewBox="0 0 400 400">
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <circle cx="200" cy="200" r="195"/>
+        <circle cx="200" cy="200" r="170"/>
+        <circle cx="200" cy="200" r="120"/>
+        <circle cx="200" cy="200" r="80"/>
+        <circle cx="200" cy="200" r="30"/>
+        <path d="M200 5V395M5 200H395M62 62L338 338M338 62L62 338M103 32L297 368M297 32L103 368M32 103L368 297M368 103L32 297"/>
+      </g>
+      <g fill="currentColor" font-size="22" text-anchor="middle" font-family="serif">
+        <text x="200" y="40">♈</text><text x="283" y="62">♉</text><text x="343" y="122">♊</text>
+        <text x="366" y="207">♋</text><text x="343" y="292">♌</text><text x="283" y="352">♍</text>
+        <text x="200" y="375">♎</text><text x="117" y="352">♏</text><text x="57" y="292">♐</text>
+        <text x="34" y="207">♑</text><text x="57" y="122">♒</text><text x="117" y="62">♓</text>
+      </g>
+    </symbol>
+    <symbol id="ornament" viewBox="0 0 160 14">
+      <path d="M0 7H62M98 7H160" stroke="currentColor" stroke-width="1"/>
+      <path d="M80 1L86 7L80 13L74 7Z" fill="currentColor"/>
+      <circle cx="68" cy="7" r="2" fill="currentColor"/>
+      <circle cx="92" cy="7" r="2" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo">
+        <svg class="logo__icon"><use href="#mandala"/></svg>
+        <span class="logo__text">
+          <strong>JyotiVaan</strong>
+          <small>Guidance for a Better You</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav__link active">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#testimonials" class="nav__link">Testimonials</a>
+        <a href="#blog" class="nav__link">Blog</a>
+        <a href="#contact" class="nav__link">Contact</a>
+        <a href="#booking" class="btn btn--gold btn--sm nav__cta-mobile">Book Consultation</a>
+      </nav>
+
+      <a href="#booking" class="btn btn--gold btn--sm header__cta">Book Consultation <i class="fa-regular fa-calendar-check"></i></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__stars"></div>
+    <div class="container hero__inner">
+      <div class="hero__content" data-aos="fade-right">
+        <span class="hero__badge">Vedic Astrology | Numerology | Life Guidance</span>
+        <h1 class="hero__title">Discover the<br>Path Written in<br><span class="text-gold"><span id="typed"></span></span></h1>
+        <p class="hero__text">Get personalized guidance for your life, career, relationships, health and future from experienced astrologers.</p>
+        <div class="hero__actions">
+          <a href="#booking" class="btn btn--gold">Book a Consultation <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#services" class="btn btn--outline">Explore Services</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <i class="fa-solid fa-users stat__icon"></i>
+            <div><strong><span class="counter" data-end="5000" data-separator=",">0</span>+</strong><small>Happy Clients</small></div>
+          </div>
+          <div class="stat">
+            <i class="fa-solid fa-medal stat__icon stat__icon--ring"></i>
+            <div><strong><span class="counter" data-end="10">0</span>+ Years</strong><small>Experience</small></div>
+          </div>
+          <div class="stat">
+            <i class="fa-solid fa-shield-halved stat__icon stat__icon--ring"></i>
+            <div><strong><span class="counter" data-end="100">0</span>%</strong><small>Confidential</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES STRIP ============ -->
+  <section class="features" id="about">
+    <div class="container features__grid">
+      <div class="feature" data-aos="fade-up">
+        <span class="feature__icon"><i class="fa-solid fa-dharmachakra"></i></span>
+        <h3>Accurate Predictions</h3>
+        <p>Based on authentic Vedic principles</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="100">
+        <span class="feature__icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
+        <h3>Personalized Guidance</h3>
+        <p>Tailored to your unique birth chart</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="200">
+        <span class="feature__icon"><i class="fa-solid fa-user-shield"></i></span>
+        <h3>Confidential &amp; Secure</h3>
+        <p>Your privacy is our priority</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="300">
+        <span class="feature__icon"><i class="fa-solid fa-clipboard-check"></i></span>
+        <h3>Trusted by Thousands</h3>
+        <p>Positive and life-changing experiences</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="eyebrow">Our Services</span>
+        <h2 class="section-title">Guidance for Every Step of Life</h2>
+        <svg class="ornament"><use href="#ornament"/></svg>
+        <p class="section-sub">Choose from a range of astrology and numerology services designed to bring clarity,<br>peace and success to your life.</p>
+      </div>
+
+      <div class="services__grid">
+        <article class="service-card" data-aos="fade-up">
+          <div class="service-card__img"><img src="assets/images/birth-chart.jpg" alt="Birth chart wheel"></div>
+          <div class="service-card__body">
+            <h3>Birth Chart Analysis</h3>
+            <p>Understand your personality, strengths, weaknesses and life path.</p>
+            <a href="#booking" class="link-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card__img"><img src="assets/images/career.jpg" alt="Businessman looking at city skyline"></div>
+          <div class="service-card__body">
+            <h3>Career Guidance</h3>
+            <p>Find the right career path and unlock your professional growth.</p>
+            <a href="#booking" class="link-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card__img"><img src="assets/images/love.jpg" alt="Hands holding a glowing heart"></div>
+          <div class="service-card__body">
+            <h3>Love &amp; Relationship</h3>
+            <p>Get insights into your love life and build stronger relationships.</p>
+            <a href="#booking" class="link-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card__img"><img src="assets/images/marriage.jpg" alt="Golden wedding rings"></div>
+          <div class="service-card__body">
+            <h3>Marriage Analysis</h3>
+            <p>Know the right time for marriage and compatibility analysis.</p>
+            <a href="#booking" class="link-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="service-card" data-aos="fade-up">
+          <div class="service-card__img"><img src="assets/images/health.jpg" alt="Meditating figure on a lotus"></div>
+          <div class="service-card__body">
+            <h3>Health Predictions</h3>
+            <p>Understand potential health issues and remedies.</p>
+            <a href="#booking" class="link-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card__img"><img src="assets/images/business.jpg" alt="Gold coins with rising graph"></div>
+          <div class="service-card__body">
+            <h3>Business &amp; Finance</h3>
+            <p>Get guidance for financial growth and business success.</p>
+            <a href="#booking" class="link-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card__img"><img src="assets/images/numerology.jpg" alt="Glowing numbers"></div>
+          <div class="service-card__body">
+            <h3>Numerology Analysis</h3>
+            <p>Discover the power of numbers in your life.</p>
+            <a href="#booking" class="link-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card__img"><img src="assets/images/vastu.jpg" alt="Beautiful home at sunset"></div>
+          <div class="service-card__body">
+            <h3>Vastu Consultation</h3>
+            <p>Bring positive energy to your home and workplace.</p>
+            <a href="#booking" class="link-more">Know More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="section why">
+    <svg class="why__wheel why__wheel--left"><use href="#zodiac-wheel"/></svg>
+    <svg class="why__wheel why__wheel--right"><use href="#zodiac-wheel"/></svg>
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2 class="section-title section-title--light">Trusted Guidance, <span class="text-gold text-underline">Real Results</span></h2>
+      </div>
+      <div class="why__grid">
+        <div class="why-card" data-aos="zoom-in">
+          <i class="fa-solid fa-user-group"></i>
+          <h3>Experienced Astrologers</h3>
+          <p>Years of knowledge<br>and practice</p>
+        </div>
+        <div class="why-card" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fa-solid fa-book-open"></i>
+          <h3>Authentic Vedic Methods</h3>
+          <p>Based on traditional<br>scriptures</p>
+        </div>
+        <div class="why-card" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fa-solid fa-bullseye"></i>
+          <h3>Personalized Solutions</h3>
+          <p>Tailored to your unique<br>life situation</p>
+        </div>
+        <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Ongoing Support</h3>
+          <p>Guidance even after<br>consultation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="eyebrow">Client Testimonials</span>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <svg class="ornament"><use href="#ornament"/></svg>
+      </div>
+
+      <div class="swiper testimonial-swiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testi-card">
+              <div class="testi-card__head">
+                <img src="assets/images/client-1.jpg" alt="Rohit Sharma">
+                <div><h4>Rohit Sharma</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+              </div>
+              <p>"The guidance I received helped me make the right career decision. Highly recommended!"</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testi-card">
+              <div class="testi-card__head">
+                <img src="assets/images/client-2.jpg" alt="Priya Mehta">
+                <div><h4>Priya Mehta</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+              </div>
+              <p>"Accurate predictions and practical remedies. My life has become much more positive."</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testi-card">
+              <div class="testi-card__head">
+                <img src="assets/images/client-3.jpg" alt="Amit Verma">
+                <div><h4>Amit Verma</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+              </div>
+              <p>"Very professional and supportive. The consultation gave me clarity and peace of mind."</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testi-card">
+              <div class="testi-card__head">
+                <span class="avatar-initials">SK</span>
+                <div><h4>Sneha Kapoor</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+              </div>
+              <p>"The marriage compatibility reading was spot on. We felt confident about our decision."</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testi-card">
+              <div class="testi-card__head">
+                <span class="avatar-initials">AD</span>
+                <div><h4>Arjun Das</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+              </div>
+              <p>"Vastu suggestions for our office made a visible difference. Thank you for the guidance."</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testi-card">
+              <div class="testi-card__head">
+                <span class="avatar-initials">NB</span>
+                <div><h4>Neha Banerjee</h4><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+              </div>
+              <p>"Numerology analysis helped me choose a lucky name for my business. Wonderful experience."</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING ============ -->
+  <section class="booking" id="booking">
+    <svg class="booking__wheel booking__wheel--left"><use href="#zodiac-wheel"/></svg>
+    <svg class="booking__wheel booking__wheel--right"><use href="#zodiac-wheel"/></svg>
+    <div class="container booking__inner">
+      <div class="booking__info" data-aos="fade-right">
+        <div class="booking__copy">
+          <span class="eyebrow">Book Your Session</span>
+          <h2>Get Personalized<br>Astrology Consultation</h2>
+          <p>Take the first step towards a brighter and happier future.<br>Book your consultation today and get expert guidance.</p>
+          <ul class="checklist">
+            <li><i class="fa-solid fa-circle-check"></i> One-to-One Consultation</li>
+            <li><i class="fa-solid fa-circle-check"></i> Online or In-Person (as per availability)</li>
+            <li><i class="fa-solid fa-circle-check"></i> Confidential &amp; Secure</li>
+            <li><i class="fa-solid fa-circle-check"></i> Easy Booking Process</li>
+          </ul>
+        </div>
+        <img class="booking__compass" src="assets/images/compass.jpg" alt="Antique brass astrolabe on old books">
+      </div>
+
+      <form class="booking__form" id="bookingForm" data-aos="fade-left" novalidate>
+        <h3>Book a Consultation</h3>
+        <label>Your Name<input type="text" name="name" placeholder="Enter your name" required></label>
+        <label>Email Address<input type="email" name="email" placeholder="Enter your email" required></label>
+        <label>Phone Number<input type="tel" name="phone" placeholder="Enter your phone number" required></label>
+        <label>Select Service
+          <span class="select-wrap">
+            <select name="service" required>
+              <option value="" selected disabled>Choose a service</option>
+              <option>Birth Chart Analysis</option>
+              <option>Career Guidance</option>
+              <option>Love &amp; Relationship</option>
+              <option>Marriage Analysis</option>
+              <option>Health Predictions</option>
+              <option>Business &amp; Finance</option>
+              <option>Numerology Analysis</option>
+              <option>Vastu Consultation</option>
+            </select>
+          </span>
+        </label>
+        <label>Preferred Date
+          <span class="date-wrap">
+            <input type="text" name="date" id="datePicker" placeholder="dd-mm-yyyy" required>
+            <i class="fa-regular fa-calendar"></i>
+          </span>
+        </label>
+        <button type="submit" class="btn btn--gold btn--block">Book My Consultation <i class="fa-solid fa-arrow-right"></i></button>
+        <p class="form-msg" id="formMsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ BLOG ============ -->
+  <section class="blog" id="blog">
+    <div class="container">
+      <div class="section-head section-head--tight" data-aos="fade-up">
+        <span class="eyebrow">Latest Blogs</span>
+        <h2 class="section-title section-title--sm">Insights from Our Astrology Experts</h2>
+      </div>
+      <div class="blog__grid">
+        <article class="blog-card" data-aos="fade-up">
+          <img src="assets/images/blog-1.jpg" alt="Planets in deep space">
+          <div>
+            <h3>How Planets Influence Your Career Growth</h3>
+            <time>Oct 12, 2026</time>
+            <a href="#" class="link-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/images/blog-2.jpg" alt="Numerology wheel">
+          <div>
+            <h3>The Power of Numerology in Daily Life</h3>
+            <time>Oct 08, 2026</time>
+            <a href="#" class="link-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/images/blog-3.jpg" alt="Vastu energy grid">
+          <div>
+            <h3>Vastu Tips to Bring Positive Energy at Home</h3>
+            <time>Oct 05, 2026</time>
+            <a href="#" class="link-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <svg class="footer__mandala footer__mandala--left"><use href="#mandala"/></svg>
+    <svg class="footer__mandala footer__mandala--right"><use href="#mandala"/></svg>
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="logo logo--light">
+          <svg class="logo__icon"><use href="#mandala"/></svg>
+          <span class="logo__text"><strong>JyotiVaan</strong><small>Guidance for a Better You</small></span>
+        </a>
+        <p>Your trusted partner in astrology, numerology and Vastu. Bringing clarity, positivity and success to your life.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#services">Birth Chart Analysis</a></li>
+          <li><a href="#services">Career Guidance</a></li>
+          <li><a href="#services">Love &amp; Relationship</a></li>
+          <li><a href="#services">Marriage Analysis</a></li>
+          <li><a href="#services">Numerology</a></li>
+          <li><a href="#services">Vastu Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@jyotivaan.com">info@jyotivaan.com</a></li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:+919676543210">+91 96765 43210</a></li>
+          <li><i class="fa-solid fa-location-dot"></i> Kolkata, West Bengal, India</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; <span id="year">2026</span> JyotiVaan. All Rights Reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a></p>
+    </div>
+  </footer>
+
+  <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
